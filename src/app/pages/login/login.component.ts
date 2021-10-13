@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   SnackBarClass,
-  SnackBarService
+  SnackBarService,
 } from 'src/app/components/snackBar/snack-bar.service';
 import { AuthService } from 'src/app/services/auth/auth.service';
 // import { TranslationService } from 'src/app/services/translate/translate.service';
@@ -23,10 +23,8 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private snackBar: SnackBarService,
     private authService: AuthService,
-    private route: Router,
-    // private translationService: TranslationService
+    private route: Router
   ) {
-    // this.translationService.setCollection('LOGIN', 'pt-BR');
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],

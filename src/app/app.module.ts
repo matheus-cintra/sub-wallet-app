@@ -23,11 +23,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SidenavService } from './components/sidenav/sidenav.service';
-import { HomeComponent } from './pages/home/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { PipesModule } from './pipes/pipes.module';
 import { AuthInterceptor } from './services/auth/auth.interceptor';
-import { TranslationService } from './services/translate/translate.service';
 
 export function createTranslateLoader(http: HttpClient) {
   // return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
@@ -65,7 +63,6 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
-    PipesModule,
   ],
   providers: [
     HttpClient,
@@ -75,7 +72,6 @@ export function createTranslateLoader(http: HttpClient) {
       multi: true,
     },
     SidenavService,
-    // TranslationService,
   ],
   bootstrap: [AppComponent],
 })

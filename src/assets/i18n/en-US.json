@@ -2,5 +2,8 @@
   "LOGIN": {
     "EMAIL": "User Email",
     "PASSWORD": "Password"
+  },
+  "HOME": {
+    "WELCOME": "Welcome to home"
   }
 }
