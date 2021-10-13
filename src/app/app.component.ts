@@ -10,7 +10,6 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'subscription-wallet';
   lang = 'pt-BR';
-  authenticated = false;
   translate;
 
   constructor(private router: Router, translate: TranslateService) {
@@ -18,26 +17,32 @@ export class AppComponent {
     const actualLang = localStorage.getItem('lang');
     if (!actualLang) {
       translate.setDefaultLang('pt-BR');
+      this.setLang('pt-BR');
     } else {
       translate.setDefaultLang(actualLang);
+      this.setLang(actualLang);
     }
   }
 
   changeLanguage() {
     switch (this.lang) {
       case 'pt-BR':
-        this.translate.use('en-US');
-        this.lang = 'en-US';
+        this.setLang('en-US');
         break;
 
       case 'en-US':
-        this.translate.use('pt-BR');
-        this.lang = 'pt-BR';
+        this.setLang('pt-BR');
         break;
 
       default:
         break;
     }
+  }
+
+  setLang(lang: string) {
+    this.translate.use(lang);
+    this.lang = lang;
+    localStorage.setItem('lang', lang);
   }
 
   showHeader() {
