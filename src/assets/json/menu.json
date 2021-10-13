@@ -1,0 +1,20 @@
+[
+  {
+    "route": "home",
+    "name": "Home",
+    "path": "/home",
+    "icon": "home"
+  },
+  {
+    "route": "subscriptions",
+    "name": "Assinaturas",
+    "path": "/subscriptions",
+    "icon": "subscriptions"
+  },
+  {
+    "route": "payment-methods",
+    "name": "Métodos de Pagamentos",
+    "path": "/payment-methods",
+    "icon": "credit_card"
+  }
+]

@@ -1,0 +1,14 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="sidenav">
+    <span class="route-page" *ngFor="let page of appPages">
+
+      <a href="{{page.route}}" class="link-route">
+        {{page.name}}<mat-icon>{{page.icon}}</mat-icon>
+      </a>
+    </span>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

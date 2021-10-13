@@ -1,0 +1,13 @@
+.mat-toolbar {
+  background: #8155BA;
+  color: #fff;
+  justify-content: space-between;
+
+  div:first-child {
+    margin-left: 48px;
+  }
+
+  div:last-child {
+    margin-right: 48px;
+  }
+}
